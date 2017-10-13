@@ -25,8 +25,8 @@ public class DLLVisualizer
         // TO DO: Build the objects to be added to your DLL
         Track song1 = new Track("Mr. Blue Sky", "Electric Light Orchestra");
         Track song2 = new Track("Don't Bring Me Down", "Electric Light Orchestra");
-        Track song3 = new Track("Uncle John's Band", "Grateful Dead");
-        Track song4 = new Track("Ripple", "Grateful Dead");
+        Track song3 = new Track("Shine a Little Love", "Electric Light Orchestra");
+        Track song4 = new Track("Strange Magic", "Electric Light Orchestra");
 
 
         // TO DO: Build the head 
@@ -37,16 +37,18 @@ public class DLLVisualizer
         DLelement next2 = new DLelement(song3.toString(), song3);
         DLelement next3 = new DLelement(song4.toString(), song4);
         
+        
 
         head.setNext(next1);
-        head.setPrev(next3);
+        head.setPrev(null);
         next1.setNext(next2);
         next1.setPrev(head);
         next2.setNext(next3);
-        next2.setPrev(next2);
-        next3.setNext(head);
+        next2.setPrev(next1);
+        next3.setNext(null);
         next3.setPrev(next2);
         
+
         
         //Prepare for visualization
         bridge.setDataStructure(head);
